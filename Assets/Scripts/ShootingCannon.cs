@@ -12,6 +12,8 @@ public class ShootingCannon : MonoBehaviour
 
     private float fireTimer = 0f;
 
+    AudioSource shootSound;
+
     private void Update()
     {
         // Update the timer
@@ -27,6 +29,7 @@ public class ShootingCannon : MonoBehaviour
 
     private void Fire()
     {
+        GetComponent<AudioSource>().Play();
         // Instantiate a bullet at the fire point position
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
 
