@@ -15,6 +15,7 @@ public class PlayerHealth : MonoBehaviour
     public static bool alive = true;
 
     private CameraShake mainCam;
+    private AudioSource hurtSound;
 
     private void Start()
     {
@@ -22,6 +23,16 @@ public class PlayerHealth : MonoBehaviour
         healthSlider.value = currentHealth;
         alive = true;
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+
+        foreach (AudioSource audioSource in audioSources)
+        {
+            if (audioSource.clip != null && audioSource.clip.name == "Hurt")
+            {
+                hurtSound = audioSource;
+                break;
+            }
+        }
     }
 
     public void TakeDamage(int damageAmount)
@@ -43,6 +54,8 @@ public class PlayerHealth : MonoBehaviour
             }
 
             mainCam.Shake();
+
+            hurtSound.Play();
         }
     }
 
