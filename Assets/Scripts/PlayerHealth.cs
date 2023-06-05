@@ -6,42 +6,44 @@ public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
-    public RectTransform healthBar;
-    private float initialHealthBarWidth;
+    public Slider healthSlider;
+    public GameObject damageScreen;
+    public GameObject deathScreen;
+    [SerializeField] float damageScreenLifetime = 0.33f;
+    public static bool alive = true;
 
     private void Start()
     {
         currentHealth = maxHealth;
-        initialHealthBarWidth = healthBar.sizeDelta.x;
-        UpdateHealthBar();
+        healthSlider.value = currentHealth;
+        alive = true;
     }
 
     public void TakeDamage(int damageAmount)
     {
-        currentHealth -= damageAmount;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        UpdateHealthBar();
+        if (alive) {
+            damageScreen.SetActive(true);
+            Invoke("DamageScreenOff", damageScreenLifetime);
+            currentHealth -= damageAmount;
+            currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+            healthSlider.value = currentHealth / 100f;
 
-        if (currentHealth <= 0)
-        {
-            ResetGame();
+            if (currentHealth <= 0)
+            {
+                alive = false;
+                deathScreen.SetActive(true);
+                Invoke("ResetGame", 3f);
+            }
         }
     }
-
-    private void UpdateHealthBar()
-    {
-        float healthRatio = (float)currentHealth / maxHealth;
-        float newWidth = initialHealthBarWidth * healthRatio;
-        healthBar.anchorMin = new Vector2(0, healthBar.anchorMin.y);
-        healthBar.anchorMax = new Vector2(0, healthBar.anchorMax.y);
-        healthBar.pivot = new Vector2(0, healthBar.pivot.y);
-        healthBar.anchoredPosition = new Vector2(20, healthBar.anchoredPosition.y);
-        healthBar.sizeDelta = new Vector2(newWidth - 1, healthBar.sizeDelta.y);
-    }
-
     public void ResetGame()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
+    }
+
+    void DamageScreenOff()
+    {
+        damageScreen.SetActive(false);
     }
 }

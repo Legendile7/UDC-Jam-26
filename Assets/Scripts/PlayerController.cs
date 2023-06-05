@@ -16,15 +16,18 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        // Horizontal movement
-        float moveX = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(moveX * moveSpeed, rb.velocity.y);
-
-        // Jumping
-        if (Input.GetButtonDown("Jump") && !isJumping)
+        if (PlayerHealth.alive)
         {
-            rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-            isJumping = true;
+            // Horizontal movement
+            float moveX = Input.GetAxis("Horizontal");
+            rb.velocity = new Vector2(moveX * moveSpeed, rb.velocity.y);
+
+            // Jumping
+            if (Input.GetButtonDown("Jump") && !isJumping)
+            {
+                rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+                isJumping = true;
+            }
         }
     }
 
