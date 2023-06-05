@@ -46,11 +46,11 @@ public class DamageCollider : MonoBehaviour
         }
         if (isEnabled)
         {
-            GetComponent<PolygonCollider2D>().enabled = true;
+            GetComponent<BoxCollider2D>().enabled = true;
         }
         else
         {
-            GetComponent<PolygonCollider2D>().enabled = false;
+            GetComponent<BoxCollider2D>().enabled = false;
             colliding = false;
         }
         if (isEnabled && colliding && canDamage && repeatDamage)
@@ -93,7 +93,6 @@ public class DamageCollider : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             colliding = false;
-            StartCoroutine(ResetDamageInterval());
         }
     }
 
