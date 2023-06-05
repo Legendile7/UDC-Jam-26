@@ -935,7 +935,7 @@ MonoBehaviour:
   animated: 1
   repeatDamage: 1
   damageInterval: 1
-  damage: 1
+  damage: 10
 --- !u!212 &508920984
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2826,7 +2826,7 @@ MonoBehaviour:
   animated: 1
   repeatDamage: 1
   damageInterval: 1
-  damage: 1
+  damage: 10
 --- !u!60 &1358751233
 PolygonCollider2D:
   m_ObjectHideFlags: 0
