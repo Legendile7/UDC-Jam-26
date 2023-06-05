@@ -15,6 +15,14 @@ public class Lights : MonoBehaviour
         UpdateButtonText();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            ToggleLightsState();
+        }
+    }
+
     private void ToggleLightsState()
     {
         lightsOn = !lightsOn;
