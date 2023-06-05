@@ -14,11 +14,14 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] float healScreenLifetime = 0.33f;
     public static bool alive = true;
 
+    private CameraShake mainCam;
+
     private void Start()
     {
         currentHealth = maxHealth;
         healthSlider.value = currentHealth;
         alive = true;
+        mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
     }
 
     public void TakeDamage(int damageAmount)
@@ -30,12 +33,16 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
             healthSlider.value = currentHealth / 100f;
 
+            mainCam.shakeIntensity = damageAmount/100f;
+
             if (currentHealth <= 0)
             {
                 alive = false;
                 deathScreen.SetActive(true);
                 Invoke("ResetGame", 3f);
             }
+
+            mainCam.Shake();
         }
     }
 
