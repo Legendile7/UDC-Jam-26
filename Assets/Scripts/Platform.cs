@@ -16,7 +16,7 @@ public class Platform : MonoBehaviour
 
     private void Update()
     {
-        if (background.GetComponent<Renderer>().material.color == Color.white)
+        if (Lights.lightsOn)
         {
             canMove = true;
         }
@@ -24,15 +24,10 @@ public class Platform : MonoBehaviour
         {
             canMove = false;
         }
-
         if (canMove)
         {
             float horizontalMovement = Mathf.Sin(Time.time) * speed;
             transform.Translate(Vector3.right * horizontalMovement * Time.deltaTime);
-        }
-        else
-        {
-            
         }
     }
 }

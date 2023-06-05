@@ -7,7 +7,7 @@ public class Lights : MonoBehaviour
     public Button toggleButton;
     public Text buttonText;
 
-    private bool lightsOn = true;
+    public static bool lightsOn = true;
 
     private void Start()
     {
