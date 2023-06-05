@@ -71,6 +71,13 @@ public class LaserBeam : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, new Vector2(maxBeamDistance, transform.position.y));
+        if (shootsRight)
+        {
+            Gizmos.DrawLine(transform.position, new Vector2(maxBeamDistance, transform.position.y));
+        }
+        else
+        {
+            Gizmos.DrawLine(transform.position, new Vector2(-maxBeamDistance, transform.position.y));
+        }
     }
 }

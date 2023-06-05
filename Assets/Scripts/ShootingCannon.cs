@@ -36,4 +36,9 @@ public class ShootingCannon : MonoBehaviour
 
         Destroy(bullet, bulletLife);
     }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, new Vector2(bulletSpeed*bulletLife, transform.position.y));
+    }
 }

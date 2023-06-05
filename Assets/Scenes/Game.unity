@@ -784,7 +784,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 871291497502431902, guid: a6581d7c3e994e54b9fa3ad0a3252b7d, type: 3}
   firePoint: {fileID: 1872673063}
   fireRate: 1
-  bulletSpeed: -7
+  bulletSpeed: -6
   bulletLife: 5
 --- !u!61 &846304202
 BoxCollider2D:
@@ -2392,7 +2392,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 874358220}
   damageInterval: 1
   damage: 15
-  maxBeamDistance: 19.09
+  maxBeamDistance: 18.68
   shootsRight: 1
 --- !u!1 &1598053075
 GameObject:
