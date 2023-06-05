@@ -25,18 +25,21 @@ public class Lights : MonoBehaviour
 
     private void ToggleLightsState()
     {
-        lightsOn = !lightsOn;
-
-        if (lightsOn)
+        if (PlayerHealth.alive)
         {
-            backgroundObject.GetComponent<Renderer>().material.color = Color.white;
-        }
-        else
-        {
-            backgroundObject.GetComponent<Renderer>().material.color = Color.black;
-        }
+            lightsOn = !lightsOn;
 
-        UpdateButtonText();
+            if (lightsOn)
+            {
+                backgroundObject.GetComponent<Renderer>().material.color = Color.white;
+            }
+            else
+            {
+                backgroundObject.GetComponent<Renderer>().material.color = Color.black;
+            }
+
+            UpdateButtonText();
+        }
     }
 
     private void UpdateButtonText()
