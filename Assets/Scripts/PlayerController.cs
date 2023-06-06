@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 platformVelocity;
 
+    public Animator animator;
+
     AudioSource jumpSound;
 
     private void Start()
@@ -21,8 +23,11 @@ public class PlayerController : MonoBehaviour
         if (PlayerHealth.alive)
         {
             // Horizontal movement
-            float moveX = Input.GetAxis("Horizontal");
+            float moveX = Input.GetAxisRaw("Horizontal");
             rb.velocity = new Vector2(moveX * moveSpeed, rb.velocity.y);
+
+            animator.SetFloat("Horizontal", moveX);
+            animator.SetFloat("Speed", Mathf.Abs(moveX));
 
             // Jumping
             if (Input.GetButtonDown("Jump") && !isJumping)
@@ -31,6 +36,8 @@ public class PlayerController : MonoBehaviour
                 isJumping = true;
 
                 GetComponent<AudioSource>().Play();
+
+                animator.SetBool("Jumping", true);
             }
         }
     }
@@ -65,6 +72,7 @@ public class PlayerController : MonoBehaviour
         {
             if (contacts2[i].normal.y > 0.7f) // Check if collision is from below
             {
+                animator.SetBool("Jumping", false);
                 isJumping = false;
             }
         }
