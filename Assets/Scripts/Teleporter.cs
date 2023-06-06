@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class Teleporter : MonoBehaviour
 {
+    public SpriteRenderer spriteRenderer;
+    public Sprite onSprite;
+    public Sprite offSprite;
+
     public GameObject teleportTarget;
 
     private AudioSource teleportSound;
@@ -9,6 +13,8 @@ public class Teleporter : MonoBehaviour
 
     void Start()
     {
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
         player = GameObject.FindGameObjectWithTag("Player");
 
         AudioSource[] audioSources = player.GetComponents<AudioSource>();
@@ -20,6 +26,23 @@ public class Teleporter : MonoBehaviour
                 teleportSound = audioSource;
                 break;
             }
+        }
+    }
+
+    void Update()
+    {
+        ChangeSprite();
+    }
+
+    private void ChangeSprite()
+    {
+        if (Lights.lightsOn)
+        {
+            spriteRenderer.sprite = onSprite;
+        }
+        else
+        {
+            spriteRenderer.sprite = offSprite;
         }
     }
 

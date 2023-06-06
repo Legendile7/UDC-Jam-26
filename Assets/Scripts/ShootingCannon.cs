@@ -33,15 +33,19 @@ public class ShootingCannon : MonoBehaviour
         // Instantiate a bullet at the fire point position
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
 
-        // Set the bullet's velocity to move in a straight horizontal line
+        // Set the bullet's velocity to move in the direction based on the cannon's rotation and scale
         Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
-        bulletRb.velocity = new Vector2(bulletSpeed, 0f);
+        bulletRb.velocity = transform.right * bulletSpeed * transform.localScale.x;
+
+        // Flip the bullet sprite based on the cannon's scale
+        SpriteRenderer bulletSprite = bullet.GetComponent<SpriteRenderer>();
+        bulletSprite.flipX = transform.localScale.x < 0f;
 
         Destroy(bullet, bulletLife);
     }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, new Vector2(bulletSpeed*bulletLife, transform.position.y));
+        Gizmos.DrawLine(transform.position, transform.position + (transform.right * bulletSpeed * bulletLife * transform.localScale.x));
     }
 }
