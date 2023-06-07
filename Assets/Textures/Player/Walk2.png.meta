@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9c89106829cc404468054c7208b80ed4
+guid: 37654767262b0644a9f71789ecd2de77
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,22 +105,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Portal2_0
+      name: Walk2_0
       rect:
         serializedVersion: 2
-        x: 5
+        x: 149
         y: 0
-        width: 789
-        height: 280
+        width: 265
+        height: 496
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4d2ccfc9df2a4d49a5379b8f4e6df4a
-      internalID: -411126198
+      spriteID: 0ea45755cc967c1419a538144eca615c
+      internalID: -2001287891
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Portal2_0: -411126198
+      Walk2_0: -2001287891
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

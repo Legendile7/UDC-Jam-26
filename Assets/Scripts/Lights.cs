@@ -7,12 +7,19 @@ public class Lights : MonoBehaviour
     public Button toggleButton;
     public Text buttonText;
 
+    public UnityEngine.Color lightsOff;
+    public UnityEngine.Color lightsOn1;
+
     public static bool lightsOn = true;
 
     private void Start()
     {
         toggleButton.onClick.AddListener(ToggleLightsState);
         UpdateButtonText();
+        string hexCode = "#3F3F3F";
+        ColorUtility.TryParseHtmlString(hexCode, out lightsOff);
+        string hexCode2 = "#FFFFFF";
+        ColorUtility.TryParseHtmlString(hexCode2, out lightsOn1);
     }
 
     private void Update()
@@ -31,11 +38,11 @@ public class Lights : MonoBehaviour
 
             if (lightsOn)
             {
-                backgroundObject.GetComponent<Renderer>().material.color = Color.white;
+                backgroundObject.GetComponent<Renderer>().material.color = lightsOn1;
             }
             else
             {
-                backgroundObject.GetComponent<Renderer>().material.color = Color.black;
+                backgroundObject.GetComponent<Renderer>().material.color = lightsOff;
             }
 
             UpdateButtonText();

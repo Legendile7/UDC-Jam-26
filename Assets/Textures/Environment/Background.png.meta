@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9c89106829cc404468054c7208b80ed4
+guid: 24e0762236f4d574e89c592b37c4fda9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,22 +105,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Portal2_0
+      name: Background_0
       rect:
         serializedVersion: 2
-        x: 5
+        x: 0
         y: 0
-        width: 789
-        height: 280
+        width: 960
+        height: 540
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4d2ccfc9df2a4d49a5379b8f4e6df4a
-      internalID: -411126198
+      spriteID: 06d3d5b8dbc8f3d4887be433435ff4f9
+      internalID: 932831561
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Portal2_0: -411126198
+      Background_0: 932831561
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

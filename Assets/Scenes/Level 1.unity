@@ -343,7 +343,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 415617964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9, y: -6.24, z: 0.17489047}
+  m_LocalPosition: {x: -9, y: -6.01, z: 0.17489047}
   m_LocalScale: {x: 0.4164062, y: 0.275, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -431,18 +431,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.020293713, y: -0.024584875}
+  m_Offset: {x: -0.020293713, y: -0.81277347}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.89, y: 1.42}
+    oldSize: {x: 7.89, y: 2.8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.1512508, y: 0.9508302}
+  m_Size: {x: 3.1512508, y: 1.133357}
   m_EdgeRadius: 0
 --- !u!61 &415617969
 BoxCollider2D:
@@ -457,18 +457,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01070261, y: -0.030730873}
+  m_Offset: {x: 0.01070261, y: -0.8189204}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.89, y: 1.42}
+    oldSize: {x: 7.89, y: 2.8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.8914633, y: 0.93853825}
+  m_Size: {x: 7.8914633, y: 1.121063}
   m_EdgeRadius: 0
 --- !u!1 &423566293
 GameObject:
@@ -824,6 +824,8 @@ MonoBehaviour:
   backgroundObject: {fileID: 1504586206}
   toggleButton: {fileID: 574280952}
   buttonText: {fileID: 88227607}
+  lightsOff: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 0}
+  lightsOn1: {r: 1, g: 1, b: 1, a: 0}
 --- !u!114 &574280952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1435,7 +1437,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899665361}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.49, y: -6.24, z: 0.17489047}
+  m_LocalPosition: {x: -1.49, y: -6.01, z: 0.17489047}
   m_LocalScale: {x: 0.41640624, y: 0.275, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1507,18 +1509,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000002861023, y: -0.036192685}
+  m_Offset: {x: -0.000002861023, y: -0.8183011}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.89, y: 1.42}
+    oldSize: {x: 7.89, y: 2.8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.888817, y: 0.9276146}
+  m_Size: {x: 7.888817, y: 1.1266952}
   m_EdgeRadius: 0
 --- !u!1 &923226631
 GameObject:
@@ -1662,7 +1664,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 206}
+  m_AnchoredPosition: {x: 0, y: 262}
   m_SizeDelta: {x: 1000, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1017002309
@@ -2797,8 +2799,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
+  m_Sprite: {fileID: 932831561, guid: 24e0762236f4d574e89c592b37c4fda9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2816,8 +2818,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504586206}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.685843, y: 0.5170304, z: 1.3448905}
-  m_LocalScale: {x: 65.935875, y: 25.745668, z: 1}
+  m_LocalPosition: {x: 6.86, y: 0.51703, z: 1.3448905}
+  m_LocalScale: {x: 3.7552543, y: 4.1512127, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 927255532}
