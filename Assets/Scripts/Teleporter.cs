@@ -10,6 +10,7 @@ public class Teleporter : MonoBehaviour
 
     private AudioSource teleportSound;
     private GameObject player;
+    public bool generatorOn;
 
     void Start()
     {
@@ -40,9 +41,13 @@ public class Teleporter : MonoBehaviour
         {
             spriteRenderer.sprite = onSprite;
         }
-        else
+        if (!Lights.lightsOn && !generatorOn)
         {
             spriteRenderer.sprite = offSprite;
+        }
+        if (!Lights.lightsOn && generatorOn)
+        {
+            spriteRenderer.sprite = onSprite;
         }
     }
 
@@ -55,6 +60,11 @@ public class Teleporter : MonoBehaviour
                 teleportSound.Play();
                 TeleportPlayer(collision.gameObject);
             }
+            if (!Lights.lightsOn && generatorOn)
+            {
+                teleportSound.Play();
+                TeleportPlayer(collision.gameObject);
+            }
         }
     }
 
@@ -63,6 +73,11 @@ public class Teleporter : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             if (Lights.lightsOn)
+            {
+                teleportSound.Play();
+                TeleportPlayer(collision.gameObject);
+            }
+            if (!Lights.lightsOn && generatorOn)
             {
                 teleportSound.Play();
                 TeleportPlayer(collision.gameObject);

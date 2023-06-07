@@ -9,6 +9,7 @@ TagManager:
   - Platform
   - LaserBeam
   - Bad
+  - Projectile
   layers:
   - Default
   - TransparentFX
