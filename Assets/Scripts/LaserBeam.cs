@@ -30,11 +30,11 @@ public class LaserBeam : MonoBehaviour
         RaycastHit2D hit;
         if (shootsRight)
         {
-            hit = Physics2D.Raycast(transform.position, transform.right);
+            hit = Physics2D.Raycast(transform.position, -transform.right);
         }
         else
         {
-            hit = Physics2D.Raycast(transform.position, -transform.right);
+            hit = Physics2D.Raycast(transform.position, transform.right);
         }
 
         if (hit && Lights.lightsOn)
