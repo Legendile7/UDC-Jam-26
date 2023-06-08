@@ -19,40 +19,24 @@ public class DamageCollider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (needsElectricity && Lights.lightsOn || !needsElectricity)
+        if (!needsElectricity)
         {
             isEnabled = true;
+            Animate(true);
+            GetComponent<BoxCollider2D>().enabled = true;
+        }
+        else
+        {
+            isEnabled = false;
+            Animate(false);
+            GetComponent<BoxCollider2D>().enabled = false;
+            colliding = false;
         }
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update()
     {
-        if (needsElectricity && Lights.lightsOn)
-        {
-            if (!isEnabled && animated)
-            {
-                Animate(true);
-            }
-            isEnabled = true;
-        }
-        else if (needsElectricity && !Lights.lightsOn)
-        {
-            if (isEnabled && animated)
-            {
-                Animate(false);
-            }
-            isEnabled = false;
-        }
-        if (isEnabled)
-        {
-            GetComponent<BoxCollider2D>().enabled = true;
-        }
-        else
-        {
-            GetComponent<BoxCollider2D>().enabled = false;
-            colliding = false;
-        }
         if (isEnabled && colliding && canDamage && repeatDamage)
         {
             PlayerHealth healthManager = player.GetComponent<PlayerHealth>();
@@ -75,7 +59,25 @@ public class DamageCollider : MonoBehaviour
             a.SetTrigger("Off");
         }
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && Lights.lightsOn)
+        {
+            Animate(true);
+            GetComponent<BoxCollider2D>().enabled = true;
+            isEnabled = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && Lights.lightsOn)
+        {
+            Animate(false);
+            GetComponent<BoxCollider2D>().enabled = false;
+            colliding = false;
+            isEnabled = false;
+        }
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
