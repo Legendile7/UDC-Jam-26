@@ -49,6 +49,7 @@ public class PlayerHealth : MonoBehaviour
             if (currentHealth <= 0)
             {
                 alive = false;
+                Explosion.PlayParticleSystemsInChildren(transform);
                 deathScreen.SetActive(true);
                 Invoke("ResetGame", 3f);
             }
