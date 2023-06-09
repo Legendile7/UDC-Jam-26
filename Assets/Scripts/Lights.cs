@@ -44,8 +44,6 @@ public class Lights : MonoBehaviour
             {
                 backgroundObject.GetComponent<Renderer>().material.color = lightsOff;
             }
-
-            UpdateButtonText();
         }
     }
 
