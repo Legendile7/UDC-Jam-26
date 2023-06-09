@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public GameObject damageScreen;
     public GameObject healScreen;
     public GameObject deathScreen;
+    public GameObject deathExplosion;
     [SerializeField] float damageScreenLifetime = 0.33f;
     [SerializeField] float healScreenLifetime = 0.33f;
     public static bool alive = true;
@@ -49,9 +50,10 @@ public class PlayerHealth : MonoBehaviour
             if (currentHealth <= 0)
             {
                 alive = false;
-                Explosion.PlayParticleSystemsInChildren(transform);
+                Instantiate(deathExplosion, transform.position, transform.rotation);
+                //Explosion.PlayParticleSystemsInChildren(transform);
                 deathScreen.SetActive(true);
-                Invoke("ResetGame", 3f);
+                Destroy(gameObject);
             }
 
             mainCam.Shake();
@@ -70,12 +72,6 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
             healthSlider.value = currentHealth / 100f;
         }
-    }
-
-    public void ResetGame()
-    {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex);
     }
 
     void DamageScreenOff()
