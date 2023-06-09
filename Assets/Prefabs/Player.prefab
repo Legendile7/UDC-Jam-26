@@ -107,6 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   jumpForce: 9
+  animator: {fileID: 0}
 --- !u!50 &1340109975671184180
 Rigidbody2D:
   serializedVersion: 4
@@ -172,6 +173,7 @@ MonoBehaviour:
   damageScreen: {fileID: 0}
   healScreen: {fileID: 0}
   deathScreen: {fileID: 0}
+  deathExplosion: {fileID: 100000, guid: fb1312d91b8716042b1151f9b514fc16, type: 3}
   damageScreenLifetime: 0.33
   healScreenLifetime: 0.33
 --- !u!82 &1340109975671184178

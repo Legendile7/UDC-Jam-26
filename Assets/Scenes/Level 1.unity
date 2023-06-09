@@ -7729,10 +7729,6 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 1017002309}
-    - target: {fileID: 1340109975671184181, guid: 689fa91854853c34294198b671882284, type: 3}
-      propertyPath: deathExplosion
-      value: 
-      objectReference: {fileID: 100000, guid: fb1312d91b8716042b1151f9b514fc16, type: 3}
     - target: {fileID: 1340109975671184182, guid: 689fa91854853c34294198b671882284, type: 3}
       propertyPath: m_RootOrder
       value: 4
