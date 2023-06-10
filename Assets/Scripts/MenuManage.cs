@@ -14,9 +14,12 @@ public class MenuManage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayButton.SetActive(true);
-        SettingsButton.SetActive(true);
-        LevelSelect.SetActive(false);
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            PlayButton.SetActive(true);
+            SettingsButton.SetActive(true);
+            LevelSelect.SetActive(false);
+        }
     }
 
     public void LoadLevel(int index)
@@ -49,5 +52,10 @@ public class MenuManage : MonoBehaviour
         {
             click.Play();
         }
+    }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
