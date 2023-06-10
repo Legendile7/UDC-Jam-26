@@ -49,14 +49,17 @@ public class DamageCollider : MonoBehaviour
     }
     void Animate(bool condition)
     {
-        Animator a = GetComponent<Animator>();
-        if (condition)
+        if (animated)
         {
-            a.SetTrigger("On");
-        }
-        else
-        {
-            a.SetTrigger("Off");
+            Animator a = GetComponent<Animator>();
+            if (condition)
+            {
+                a.SetTrigger("On");
+            }
+            else
+            {
+                a.SetTrigger("Off");
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

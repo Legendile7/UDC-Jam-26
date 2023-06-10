@@ -1143,6 +1143,7 @@ MonoBehaviour:
   buttonText: {fileID: 88227607}
   lightsOff: {r: 0.12156863, g: 0.12156863, b: 0.12156863, a: 1}
   lightsOn1: {r: 0.81960785, g: 0.81960785, b: 0.81960785, a: 1}
+  toggleSFX: {fileID: 8300000, guid: ea5adf558d32706408f15f089ae7436a, type: 3}
 --- !u!114 &574280952
 MonoBehaviour:
   m_ObjectHideFlags: 0

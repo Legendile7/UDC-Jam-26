@@ -11,7 +11,7 @@ public class LaserBeam : MonoBehaviour
     public float maxBeamDistance;
     public bool shootsRight = true;
     private Vector2 maxBeam;
-
+    public bool generatorOn;
     private void Start()
     {
         maxBeam = new Vector2(maxBeamDistance, transform.position.y);
@@ -37,7 +37,7 @@ public class LaserBeam : MonoBehaviour
             hit = Physics2D.Raycast(transform.position, transform.right);
         }
 
-        if (hit && Lights.lightsOn)
+        if (hit && Lights.lightsOn || hit && generatorOn)
         {
             lineRenderer.SetPosition(1, hit.point);
 

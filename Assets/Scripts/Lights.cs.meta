@@ -3,7 +3,11 @@ guid: c5f83e799f1397445bea521e45a6df78
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - backgroundObject: {instanceID: 0}
+  - toggleButton: {instanceID: 0}
+  - buttonText: {instanceID: 0}
+  - toggleSFX: {fileID: 8300000, guid: ea5adf558d32706408f15f089ae7436a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

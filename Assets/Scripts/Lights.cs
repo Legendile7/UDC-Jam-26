@@ -12,15 +12,17 @@ public class Lights : MonoBehaviour
 
     public static bool lightsOn = true;
 
+    public AudioClip toggleSFX;
+    private AudioSource toggleSFXSc;
+
     private void Start()
     {
+        toggleSFXSc = gameObject.AddComponent<AudioSource>();
+        toggleSFXSc.clip = toggleSFX;
         toggleButton.onClick.AddListener(ToggleLightsState);
         UpdateButtonText();
         backgroundObject.GetComponent<Renderer>().material.color = lightsOn1;
-        if (!lightsOn)
-        {
-            ToggleLightsState();
-        }
+        lightsOn = true;
     }
 
     private void Update()
@@ -35,6 +37,7 @@ public class Lights : MonoBehaviour
     {
         if (PlayerHealth.alive)
         {
+            toggleSFXSc.Play();
             lightsOn = !lightsOn;
 
             if (lightsOn)
