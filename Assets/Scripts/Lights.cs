@@ -16,6 +16,7 @@ public class Lights : MonoBehaviour
     {
         toggleButton.onClick.AddListener(ToggleLightsState);
         UpdateButtonText();
+        backgroundObject.GetComponent<Renderer>().material.color = lightsOn1;
         if (!lightsOn)
         {
             ToggleLightsState();
