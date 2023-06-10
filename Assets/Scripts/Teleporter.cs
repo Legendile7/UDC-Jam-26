@@ -10,6 +10,7 @@ public class Teleporter : MonoBehaviour
 
     private AudioSource teleportSound;
     private GameObject player;
+
     public bool generatorOn;
 
     void Start()
@@ -41,11 +42,11 @@ public class Teleporter : MonoBehaviour
         {
             spriteRenderer.sprite = onSprite;
         }
-        if (!Lights.lightsOn && !generatorOn)
+        if (!Lights.lightsOn & !generatorOn)
         {
             spriteRenderer.sprite = offSprite;
         }
-        if (!Lights.lightsOn && generatorOn)
+        if (!Lights.lightsOn & generatorOn)
         {
             spriteRenderer.sprite = onSprite;
         }
