@@ -7,6 +7,8 @@ public class HorizontalPlatform : MonoBehaviour
     public float maxDist = 5f;
     private bool canMove = false;
     float ogStart;
+
+    public bool generatorOn;
     private void Start()
     {
         ogStart = transform.position.x;
@@ -17,7 +19,15 @@ public class HorizontalPlatform : MonoBehaviour
         {
             canMove = true;
         }
-        else
+        if (Lights.lightsOn & generatorOn)
+        {
+            canMove = true;
+        }
+        if (!Lights.lightsOn & generatorOn)
+        {
+            canMove = true;
+        }
+        if (!Lights.lightsOn & !generatorOn)
         {
             canMove = false;
         }

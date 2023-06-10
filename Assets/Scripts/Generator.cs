@@ -25,6 +25,7 @@ public class Generator : MonoBehaviour
         if (collision.gameObject.CompareTag("Projectile"))
         {
             animator.SetBool("generatorOn", true);
+            connected.GetComponent<HorizontalPlatform>().generatorOn = true;
             connected.GetComponent<Teleporter>().generatorOn = true;
         }
     }
