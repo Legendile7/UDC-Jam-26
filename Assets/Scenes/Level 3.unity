@@ -3764,7 +3764,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452769077}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.899744, y: -4.63, z: 0.17489047}
+  m_LocalPosition: {x: 16.899744, y: -3.46, z: 0.17489047}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3784,7 +3784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.8
-  background: {fileID: 1504586206}
+  maxDist: 1.95
 --- !u!50 &452769080
 Rigidbody2D:
   serializedVersion: 4
@@ -4095,7 +4095,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570366731}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.899744, y: -4.66347, z: 0.17489047}
+  m_LocalPosition: {x: 13.899744, y: -3.46, z: 0.17489047}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4115,7 +4115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.9
-  background: {fileID: 1504586206}
+  maxDist: 1.95
 --- !u!50 &570366734
 Rigidbody2D:
   serializedVersion: 4
@@ -4271,8 +4271,8 @@ MonoBehaviour:
   backgroundObject: {fileID: 1504586206}
   toggleButton: {fileID: 574280952}
   buttonText: {fileID: 88227607}
-  lightsOff: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 0}
-  lightsOn1: {r: 1, g: 1, b: 1, a: 0}
+  lightsOff: {r: 0.12156863, g: 0.12156863, b: 0.12156863, a: 1}
+  lightsOn1: {r: 0.81960785, g: 0.81960785, b: 0.81960785, a: 1}
 --- !u!114 &574280952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10460,7 +10460,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040696990}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.899744, y: -4.66347, z: 0.17489047}
+  m_LocalPosition: {x: 10.899744, y: -3.46, z: 0.17489047}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10480,7 +10480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  background: {fileID: 1504586206}
+  maxDist: 1.95
 --- !u!50 &2040696993
 Rigidbody2D:
   serializedVersion: 4

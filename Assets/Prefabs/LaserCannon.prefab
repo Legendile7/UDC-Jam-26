@@ -181,7 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 6932167235381000720}
   damageInterval: 1
-  damage: 15
+  damage: 25
   maxBeamDistance: 18.68
   shootsRight: 0
 --- !u!1 &6932167235381000726

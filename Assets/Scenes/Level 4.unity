@@ -635,8 +635,8 @@ MonoBehaviour:
   backgroundObject: {fileID: 1504586206}
   toggleButton: {fileID: 574280952}
   buttonText: {fileID: 88227607}
-  lightsOff: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 0}
-  lightsOn1: {r: 1, g: 1, b: 1, a: 0}
+  lightsOff: {r: 0.12156863, g: 0.12156863, b: 0.12156863, a: 1}
+  lightsOn1: {r: 0.81960785, g: 0.81960785, b: 0.81960785, a: 1}
 --- !u!114 &574280952
 MonoBehaviour:
   m_ObjectHideFlags: 0

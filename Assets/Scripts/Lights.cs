@@ -16,10 +16,10 @@ public class Lights : MonoBehaviour
     {
         toggleButton.onClick.AddListener(ToggleLightsState);
         UpdateButtonText();
-        string hexCode = "#3F3F3F";
-        ColorUtility.TryParseHtmlString(hexCode, out lightsOff);
-        string hexCode2 = "#FFFFFF";
-        ColorUtility.TryParseHtmlString(hexCode2, out lightsOn1);
+        if (!lightsOn)
+        {
+            ToggleLightsState();
+        }
     }
 
     private void Update()

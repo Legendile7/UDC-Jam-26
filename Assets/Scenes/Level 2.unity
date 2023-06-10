@@ -478,11 +478,11 @@ PrefabInstance:
     - target: {fileID: 1340109975671184181, guid: 689fa91854853c34294198b671882284, type: 3}
       propertyPath: healScreen
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1526863810}
     - target: {fileID: 1340109975671184181, guid: 689fa91854853c34294198b671882284, type: 3}
       propertyPath: deathScreen
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1148825098}
     - target: {fileID: 1340109975671184181, guid: 689fa91854853c34294198b671882284, type: 3}
       propertyPath: deathSprite
       value: 
@@ -490,11 +490,11 @@ PrefabInstance:
     - target: {fileID: 1340109975671184181, guid: 689fa91854853c34294198b671882284, type: 3}
       propertyPath: damageScreen
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1487930365}
     - target: {fileID: 1340109975671184181, guid: 689fa91854853c34294198b671882284, type: 3}
       propertyPath: healthSlider
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1017002309}
     - target: {fileID: 1340109975671184182, guid: 689fa91854853c34294198b671882284, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -611,7 +611,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016345263, y: -0.034267545}
+  m_Offset: {x: 0, y: -0.034267545}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -637,6 +637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  maxDist: 2.68
   background: {fileID: 0}
 --- !u!212 &239980393
 SpriteRenderer:
@@ -698,12 +699,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239980389}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: -2.66, z: 0}
+  m_LocalPosition: {x: -3.15, y: -2.66, z: 0}
   m_LocalScale: {x: 0.29999998, y: 0.29999998, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &256625760
 GameObject:
@@ -967,7 +968,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -1140,8 +1141,8 @@ MonoBehaviour:
   backgroundObject: {fileID: 1504586206}
   toggleButton: {fileID: 574280952}
   buttonText: {fileID: 88227607}
-  lightsOff: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 0}
-  lightsOn1: {r: 1, g: 1, b: 1, a: 0}
+  lightsOff: {r: 0.12156863, g: 0.12156863, b: 0.12156863, a: 1}
+  lightsOn1: {r: 0.81960785, g: 0.81960785, b: 0.81960785, a: 1}
 --- !u!114 &574280952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4561,7 +4562,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016345263, y: -0.034267545}
+  m_Offset: {x: 0, y: -0.034267545}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4587,6 +4588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -2
+  maxDist: 2.68
   background: {fileID: 0}
 --- !u!212 &737663955
 SpriteRenderer:
@@ -4648,12 +4650,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737663951}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.0000005, y: -4.66, z: 0}
+  m_LocalPosition: {x: 5.01, y: -4.66, z: 0}
   m_LocalScale: {x: 0.29999998, y: 0.29999998, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &743911256
 GameObject:
@@ -4820,7 +4822,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016345263, y: -0.034267545}
+  m_Offset: {x: 0, y: -0.034267545}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4846,6 +4848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  maxDist: 2.68
   background: {fileID: 0}
 --- !u!212 &793963523
 SpriteRenderer:
@@ -4907,7 +4910,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793963519}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 1.3399999, z: 0}
+  m_LocalPosition: {x: -3.15, y: 1.3399999, z: 0}
   m_LocalScale: {x: 0.29999998, y: 0.29999998, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9842,7 +9845,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016345263, y: -0.034267545}
+  m_Offset: {x: 0, y: -0.034267545}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -9868,6 +9871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -2
+  maxDist: 2.68
   background: {fileID: 0}
 --- !u!212 &1056794256
 SpriteRenderer:
@@ -9929,7 +9933,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056794252}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.0000005, y: -0.66, z: 0}
+  m_LocalPosition: {x: 5.01, y: -0.66, z: 0}
   m_LocalScale: {x: 0.29999998, y: 0.29999998, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

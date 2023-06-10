@@ -16,7 +16,9 @@ public class RotateSprite : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+            PlayerPrefs.SetInt("Level" + nextScene, 1);
+            SceneManager.LoadScene(nextScene);
         }
     }
 }

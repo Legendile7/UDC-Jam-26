@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -38,6 +39,10 @@ public class PlayerController : MonoBehaviour
                 GetComponent<AudioSource>().Play();
 
                 animator.SetBool("Jumping", true);
+            }
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
     }
