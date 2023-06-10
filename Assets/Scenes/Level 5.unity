@@ -10618,6 +10618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -3
   maxDist: 2.39
+  generatorOn: 0
 --- !u!212 &1598659314
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10855,7 +10856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1340109975671184182, guid: 689fa91854853c34294198b671882284, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6
+      value: -6.2
       objectReference: {fileID: 0}
     - target: {fileID: 1340109975671184182, guid: 689fa91854853c34294198b671882284, type: 3}
       propertyPath: m_LocalPosition.z
